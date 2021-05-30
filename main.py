@@ -5,7 +5,7 @@ import json
 
 
 def main():
-    print(LinksExtractor.extract_links("Cluj-Napoca"))
+    print(LinksExtractor.extract_links("Bucuresti"))
 
 
 if __name__ == "__main__":

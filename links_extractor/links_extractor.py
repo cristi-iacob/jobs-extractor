@@ -38,5 +38,7 @@ class LinksExtractor:
                 related_technologies = LinksExtractor.extract_links_for_technology_and_location(technology, location)
                 total_offers = sum(related_technologies[key] for key in related_technologies)
                 links[technology] = {"total_offers": total_offers, "technologies": related_technologies}
+                with open("output.txt", "a") as output:
+                    output.write("{\'" + technology + "\': " + str(links[technology]) + "}\n")
 
         return links
